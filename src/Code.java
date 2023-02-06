@@ -3,15 +3,15 @@ import java.io.FileNotFoundException;
 import java.util.*;
 
 /**
- * This program implements Brute Force Median Search, Branch and Bound Median Search and Greedy Motif Search algorithms
- * from the book Introduction to Bioinformatics Algorithms by Jones and Pevzner. It accepts file paths as command-line
- * arguments. Inputs files should have only 2 lines. The first line should have dna sequences of equal lengths separated
- * by commas and the second line should have an integer specifying the l (length of motif/l-mer). It outputs running
- * times for each of the three algorithms along with scores of their results over the corresponding DNA sequences. In
- * addition to processing inputs from files, numerous random DNA sequences are generated varying in one of n, t, or l at
- * a time. These sequences then go through the same process as inputs from files and the outputs and outputted to
- * console. For inputs from files, return values of methods are also outputted to console while for randomly generated
- * DNA sequences, they are not.
+ * This program implements Brute Force Median Search, Branch and Bound Median Search, Greedy Motif Search and Gibbs
+ * Motif Search algorithms from the book Introduction to Bioinformatics Algorithms by Jones and Pevzner. It accepts file
+ * paths as command-line arguments. Input files should have only 2 lines. The first line should have dna sequences of
+ * equal lengths separated by commas and the second line should have an integer specifying the l (length of
+ * motif/l-mer). It outputs running times for each of the algorithms along with scores of their results over the
+ * corresponding DNA sequences. In addition to processing inputs from files, numerous random DNA sequences are generated
+ * varying in one of n, t, or l at a time. These sequences then go through the same process as inputs from files and the
+ * outputs and outputted to console. For inputs from files, return values of methods are also outputted to console while
+ * for randomly generated DNA sequences, they are not.
  */
 class Code {
     public static void main(String[] args) {
@@ -61,10 +61,10 @@ class Code {
     }
 
     /**
-     * Times the three algorithms (10 times each) and prints average times along with scores to console
+     * Times the algorithms (10 times each) and prints average times along with scores to console
      * @param dna receives DNA sequences
      * @param l length of motif/l-mer
-     * @param printReturnVals if true, prints values returned by the three algorithms to console; if false, does not
+     * @param printReturnVals if true, prints values returned by the algorithms to console; if false, does not
      */
     private static void runAlgorithmsAndPrint(String[] dna, int l, boolean printReturnVals) {
         System.out.println("t = " + dna.length + "; n = " + dna[0].length() + "; l = " + l);
@@ -95,6 +95,14 @@ class Code {
         enTime = System.nanoTime();
 
         System.out.println("Greedy Motif Search; Average Time Taken: " + (enTime - stTime) / repeatCount +
+                " nanoseconds; Score: " + score(arrayRes, dna.length, dna, l) + (printReturnVals ? "; Return Value: " +
+                Arrays.toString(arrayRes) : ""));
+
+        stTime = System.nanoTime();
+        for (int i = 0; i < repeatCount; i++) arrayRes = gibbsMotifSearch(dna, l);
+        enTime = System.nanoTime();
+
+        System.out.println("Gibbs Motif Search; Average Time Taken: " + (enTime - stTime) / repeatCount +
                 " nanoseconds; Score: " + score(arrayRes, dna.length, dna, l) + (printReturnVals ? "; Return Value: " +
                 Arrays.toString(arrayRes) : ""));
     }
@@ -202,6 +210,79 @@ class Code {
             }
 
             s[i] = bestMotif[i];
+        }
+
+        return bestMotif;
+    }
+
+    /**
+     * Implementation of the algorithm mentioned on page 413 of Introduction to Bioinformatics Algorithms Book. Attempts
+     * to find better motifs in sequences in 'dna' by randomly choosing a new start position in a random sequence
+     * until convergence - 10 iterations without improvement.
+     * @param dna receives DNA sequences
+     * @param l receives the length of motif
+     * @return indices of start positions for each DNA sequence in 'dna'
+     */
+    private static int[] gibbsMotifSearch(String[] dna, int l) {
+        int[] bestMotif = new int[dna.length];
+        double bestScore = 0;
+        Random rand = new Random();
+        for (int i = 0; i < bestMotif.length; i++) bestMotif[i] = rand.nextInt(dna[0].length() - l + 1);
+
+        double[][] profile;
+        int noChangeCount = 0;
+
+        while (noChangeCount < 10) {
+            int chosenIndex = rand.nextInt(dna.length);
+            int chosenStPos = rand.nextInt(dna[chosenIndex].length() - l + 1);
+
+            profile = new double[4][l]; // [0][]: A; [1][]: T; [2][]: G; [3][]: C
+            Arrays.fill(profile[0], 0);
+            Arrays.fill(profile[1], 0);
+            Arrays.fill(profile[2], 0);
+            Arrays.fill(profile[3], 0);
+
+            for (int i = 0; i < l; i++) {
+                for (int j = 0; j < dna.length; j++) {
+                    int offset;
+                    if (j == chosenIndex) {
+                        offset = chosenStPos;
+                    } else {
+                        offset = bestMotif[j];
+                    }
+
+                    if (dna[j].charAt(offset + i) == 'A') {
+                        profile[0][i] += 1.0 / dna.length;
+                    } else if (dna[j].charAt(offset + i) == 'T') {
+                        profile[1][i] += 1.0 / dna.length;
+                    } else if (dna[j].charAt(offset + i) == 'G') {
+                        profile[2][i] += 1.0 / dna.length;
+                    } else if (dna[j].charAt(offset + i) == 'C') {
+                        profile[3][i] += 1.0 / dna.length;
+                    }
+                }
+            }
+
+            double[] highestInCols = new double[l];
+            Arrays.fill(highestInCols, 0);
+
+            for (int i = 0; i < 4; i++) {
+                for (int j = 0; j < l; j++) {
+                    if (highestInCols[j] < profile[i][j]) highestInCols[j] = profile[i][j];
+                }
+            }
+
+            double score = 1;
+            for (double highestInCol : highestInCols) score *= highestInCol;
+
+            if (score > bestScore) {
+                bestMotif[chosenIndex] = chosenStPos;
+                bestScore = score;
+
+                noChangeCount = 0;
+            } else {
+                noChangeCount++;
+            }
         }
 
         return bestMotif;

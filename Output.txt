@@ -1,116 +1,140 @@
 A. DNA Sequences from Files Paths Provided as Command-Line Arguments:
 t = 5; n = 68; l = 8
-Brute Force Median Search; Average Time Taken: 700826433 nanoseconds; Score: 34; Return Value: CTGATGTA
-Branch and Bound Median Search; Average Time Taken: 88120152 nanoseconds; Score: 34; Return Value: CTGATGTA
-Greedy Motif Search; Average Time Taken: 4123086 nanoseconds; Score: 30; Return Value: [0, 38, 14, 33, 1]
+Brute Force Median Search; Average Time Taken: 702975906 nanoseconds; Score: 34; Return Value: CTGATGTA
+Branch and Bound Median Search; Average Time Taken: 86663609 nanoseconds; Score: 34; Return Value: CTGATGTA
+Greedy Motif Search; Average Time Taken: 4056704 nanoseconds; Score: 30; Return Value: [0, 38, 14, 33, 1]
+Gibbs Motif Search; Average Time Taken: 237565 nanoseconds; Score: 22; Return Value: [38, 8, 3, 30, 35]
 
 t = 4; n = 43; l = 7
-Brute Force Median Search; Average Time Taken: 76888336 nanoseconds; Score: 26; Return Value: CCAATCA
-Branch and Bound Median Search; Average Time Taken: 3452530 nanoseconds; Score: 26; Return Value: CCAATCA
-Greedy Motif Search; Average Time Taken: 709162 nanoseconds; Score: 26; Return Value: [29, 21, 31, 12]
+Brute Force Median Search; Average Time Taken: 75419437 nanoseconds; Score: 26; Return Value: CCAATCA
+Branch and Bound Median Search; Average Time Taken: 3568033 nanoseconds; Score: 26; Return Value: CCAATCA
+Greedy Motif Search; Average Time Taken: 691560 nanoseconds; Score: 26; Return Value: [29, 21, 31, 12]
+Gibbs Motif Search; Average Time Taken: 121933 nanoseconds; Score: 18; Return Value: [31, 13, 14, 10]
 
 B. DNA Sequences Generated at Random:
 t = 5; n = 10; l = 8
-Brute Force Median Search; Average Time Taken: 39221635 nanoseconds; Score: 25
-Branch and Bound Median Search; Average Time Taken: 14835448 nanoseconds; Score: 25
-Greedy Motif Search; Average Time Taken: 9308 nanoseconds; Score: 25
+Brute Force Median Search; Average Time Taken: 39328130 nanoseconds; Score: 25
+Branch and Bound Median Search; Average Time Taken: 11125996 nanoseconds; Score: 25
+Greedy Motif Search; Average Time Taken: 7740 nanoseconds; Score: 24
+Gibbs Motif Search; Average Time Taken: 107093 nanoseconds; Score: 23
 
 t = 5; n = 20; l = 8
-Brute Force Median Search; Average Time Taken: 154687068 nanoseconds; Score: 29
-Branch and Bound Median Search; Average Time Taken: 27195718 nanoseconds; Score: 29
-Greedy Motif Search; Average Time Taken: 81867 nanoseconds; Score: 28
+Brute Force Median Search; Average Time Taken: 151045023 nanoseconds; Score: 29
+Branch and Bound Median Search; Average Time Taken: 27973836 nanoseconds; Score: 29
+Greedy Motif Search; Average Time Taken: 80056 nanoseconds; Score: 28
+Gibbs Motif Search; Average Time Taken: 164405 nanoseconds; Score: 24
 
 t = 5; n = 30; l = 8
-Brute Force Median Search; Average Time Taken: 272537665 nanoseconds; Score: 32
-Branch and Bound Median Search; Average Time Taken: 36857165 nanoseconds; Score: 32
-Greedy Motif Search; Average Time Taken: 246616 nanoseconds; Score: 29
+Brute Force Median Search; Average Time Taken: 265995733 nanoseconds; Score: 30
+Branch and Bound Median Search; Average Time Taken: 45592769 nanoseconds; Score: 30
+Greedy Motif Search; Average Time Taken: 238038 nanoseconds; Score: 27
+Gibbs Motif Search; Average Time Taken: 136184 nanoseconds; Score: 23
 
 t = 5; n = 40; l = 8
-Brute Force Median Search; Average Time Taken: 415276815 nanoseconds; Score: 32
-Branch and Bound Median Search; Average Time Taken: 60115657 nanoseconds; Score: 32
-Greedy Motif Search; Average Time Taken: 437548 nanoseconds; Score: 29
+Brute Force Median Search; Average Time Taken: 379366897 nanoseconds; Score: 31
+Branch and Bound Median Search; Average Time Taken: 73407099 nanoseconds; Score: 31
+Greedy Motif Search; Average Time Taken: 381169 nanoseconds; Score: 29
+Gibbs Motif Search; Average Time Taken: 109169 nanoseconds; Score: 28
 
 t = 5; n = 50; l = 8
-Brute Force Median Search; Average Time Taken: 503283775 nanoseconds; Score: 32
-Branch and Bound Median Search; Average Time Taken: 56919422 nanoseconds; Score: 32
-Greedy Motif Search; Average Time Taken: 578586 nanoseconds; Score: 32
+Brute Force Median Search; Average Time Taken: 523098503 nanoseconds; Score: 33
+Branch and Bound Median Search; Average Time Taken: 83599678 nanoseconds; Score: 33
+Greedy Motif Search; Average Time Taken: 679645 nanoseconds; Score: 30
+Gibbs Motif Search; Average Time Taken: 100695 nanoseconds; Score: 21
 
 t = 5; n = 60; l = 8
-Brute Force Median Search; Average Time Taken: 621419536 nanoseconds; Score: 32
-Branch and Bound Median Search; Average Time Taken: 111641359 nanoseconds; Score: 32
-Greedy Motif Search; Average Time Taken: 939957 nanoseconds; Score: 29
+Brute Force Median Search; Average Time Taken: 598626152 nanoseconds; Score: 32
+Branch and Bound Median Search; Average Time Taken: 132423561 nanoseconds; Score: 32
+Greedy Motif Search; Average Time Taken: 902997 nanoseconds; Score: 30
+Gibbs Motif Search; Average Time Taken: 46542 nanoseconds; Score: 22
 
 t = 5; n = 70; l = 8
-Brute Force Median Search; Average Time Taken: 726235600 nanoseconds; Score: 33
-Branch and Bound Median Search; Average Time Taken: 142526757 nanoseconds; Score: 33
-Greedy Motif Search; Average Time Taken: 1293901 nanoseconds; Score: 31
+Brute Force Median Search; Average Time Taken: 731710526 nanoseconds; Score: 33
+Branch and Bound Median Search; Average Time Taken: 86064758 nanoseconds; Score: 33
+Greedy Motif Search; Average Time Taken: 1463388 nanoseconds; Score: 32
+Gibbs Motif Search; Average Time Taken: 61011 nanoseconds; Score: 26
 
 t = 5; n = 80; l = 8
-Brute Force Median Search; Average Time Taken: 838669937 nanoseconds; Score: 33
-Branch and Bound Median Search; Average Time Taken: 117420319 nanoseconds; Score: 33
-Greedy Motif Search; Average Time Taken: 1938749 nanoseconds; Score: 30
+Brute Force Median Search; Average Time Taken: 832682346 nanoseconds; Score: 34
+Branch and Bound Median Search; Average Time Taken: 96796310 nanoseconds; Score: 34
+Greedy Motif Search; Average Time Taken: 1957319 nanoseconds; Score: 32
+Gibbs Motif Search; Average Time Taken: 86203 nanoseconds; Score: 27
 
 t = 5; n = 90; l = 8
-Brute Force Median Search; Average Time Taken: 959550657 nanoseconds; Score: 33
-Branch and Bound Median Search; Average Time Taken: 137228708 nanoseconds; Score: 33
-Greedy Motif Search; Average Time Taken: 2059810 nanoseconds; Score: 30
+Brute Force Median Search; Average Time Taken: 955138218 nanoseconds; Score: 34
+Branch and Bound Median Search; Average Time Taken: 114568653 nanoseconds; Score: 34
+Greedy Motif Search; Average Time Taken: 2188531 nanoseconds; Score: 30
+Gibbs Motif Search; Average Time Taken: 71153 nanoseconds; Score: 24
 
 t = 5; n = 100; l = 8
-Brute Force Median Search; Average Time Taken: 1101417449 nanoseconds; Score: 32
-Branch and Bound Median Search; Average Time Taken: 286450324 nanoseconds; Score: 32
-Greedy Motif Search; Average Time Taken: 2841145 nanoseconds; Score: 31
+Brute Force Median Search; Average Time Taken: 1048719198 nanoseconds; Score: 33
+Branch and Bound Median Search; Average Time Taken: 239209112 nanoseconds; Score: 33
+Greedy Motif Search; Average Time Taken: 2637928 nanoseconds; Score: 33
+Gibbs Motif Search; Average Time Taken: 20598 nanoseconds; Score: 24
 
 t = 2; n = 30; l = 8
-Brute Force Median Search; Average Time Taken: 114832465 nanoseconds; Score: 13
-Branch and Bound Median Search; Average Time Taken: 11309044 nanoseconds; Score: 13
-Greedy Motif Search; Average Time Taken: 151084 nanoseconds; Score: 13
+Brute Force Median Search; Average Time Taken: 107149115 nanoseconds; Score: 14
+Branch and Bound Median Search; Average Time Taken: 10659757 nanoseconds; Score: 14
+Greedy Motif Search; Average Time Taken: 169668 nanoseconds; Score: 14
+Gibbs Motif Search; Average Time Taken: 6991 nanoseconds; Score: 13
 
 t = 4; n = 30; l = 8
-Brute Force Median Search; Average Time Taken: 222538172 nanoseconds; Score: 24
-Branch and Bound Median Search; Average Time Taken: 40972278 nanoseconds; Score: 24
-Greedy Motif Search; Average Time Taken: 174243 nanoseconds; Score: 24
+Brute Force Median Search; Average Time Taken: 215855900 nanoseconds; Score: 26
+Branch and Bound Median Search; Average Time Taken: 14125183 nanoseconds; Score: 26
+Greedy Motif Search; Average Time Taken: 190315 nanoseconds; Score: 24
+Gibbs Motif Search; Average Time Taken: 15630 nanoseconds; Score: 24
 
 t = 6; n = 30; l = 8
-Brute Force Median Search; Average Time Taken: 335659099 nanoseconds; Score: 35
-Branch and Bound Median Search; Average Time Taken: 80969831 nanoseconds; Score: 35
-Greedy Motif Search; Average Time Taken: 195212 nanoseconds; Score: 34
+Brute Force Median Search; Average Time Taken: 318213070 nanoseconds; Score: 35
+Branch and Bound Median Search; Average Time Taken: 97269283 nanoseconds; Score: 35
+Greedy Motif Search; Average Time Taken: 204800 nanoseconds; Score: 35
+Gibbs Motif Search; Average Time Taken: 20217 nanoseconds; Score: 26
 
 t = 8; n = 30; l = 8
-Brute Force Median Search; Average Time Taken: 439196934 nanoseconds; Score: 46
-Branch and Bound Median Search; Average Time Taken: 127614765 nanoseconds; Score: 46
-Greedy Motif Search; Average Time Taken: 249461 nanoseconds; Score: 43
+Brute Force Median Search; Average Time Taken: 419097053 nanoseconds; Score: 46
+Branch and Bound Median Search; Average Time Taken: 121244809 nanoseconds; Score: 46
+Greedy Motif Search; Average Time Taken: 243282 nanoseconds; Score: 42
+Gibbs Motif Search; Average Time Taken: 30759 nanoseconds; Score: 36
 
 t = 10; n = 30; l = 8
-Brute Force Median Search; Average Time Taken: 550847941 nanoseconds; Score: 56
-Branch and Bound Median Search; Average Time Taken: 212474970 nanoseconds; Score: 56
-Greedy Motif Search; Average Time Taken: 271548 nanoseconds; Score: 48
+Brute Force Median Search; Average Time Taken: 523410629 nanoseconds; Score: 55
+Branch and Bound Median Search; Average Time Taken: 217594080 nanoseconds; Score: 55
+Greedy Motif Search; Average Time Taken: 265318 nanoseconds; Score: 53
+Gibbs Motif Search; Average Time Taken: 31929 nanoseconds; Score: 38
 
 t = 5; n = 30; l = 5
-Brute Force Median Search; Average Time Taken: 3233142 nanoseconds; Score: 21
-Branch and Bound Median Search; Average Time Taken: 2166281 nanoseconds; Score: 21
-Greedy Motif Search; Average Time Taken: 168027 nanoseconds; Score: 20
+Brute Force Median Search; Average Time Taken: 3004330 nanoseconds; Score: 20
+Branch and Bound Median Search; Average Time Taken: 2147553 nanoseconds; Score: 20
+Greedy Motif Search; Average Time Taken: 151216 nanoseconds; Score: 19
+Gibbs Motif Search; Average Time Taken: 12365 nanoseconds; Score: 19
 
 t = 5; n = 30; l = 6
-Brute Force Median Search; Average Time Taken: 15114349 nanoseconds; Score: 23
-Branch and Bound Median Search; Average Time Taken: 7847461 nanoseconds; Score: 23
-Greedy Motif Search; Average Time Taken: 161730 nanoseconds; Score: 21
+Brute Force Median Search; Average Time Taken: 13621628 nanoseconds; Score: 25
+Branch and Bound Median Search; Average Time Taken: 2565537 nanoseconds; Score: 25
+Greedy Motif Search; Average Time Taken: 168658 nanoseconds; Score: 21
+Gibbs Motif Search; Average Time Taken: 14432 nanoseconds; Score: 19
 
 t = 5; n = 30; l = 7
-Brute Force Median Search; Average Time Taken: 68497863 nanoseconds; Score: 29
-Branch and Bound Median Search; Average Time Taken: 11274673 nanoseconds; Score: 29
-Greedy Motif Search; Average Time Taken: 176596 nanoseconds; Score: 25
+Brute Force Median Search; Average Time Taken: 61758690 nanoseconds; Score: 27
+Branch and Bound Median Search; Average Time Taken: 11676481 nanoseconds; Score: 27
+Greedy Motif Search; Average Time Taken: 194933 nanoseconds; Score: 26
+Gibbs Motif Search; Average Time Taken: 19926 nanoseconds; Score: 21
 
 t = 5; n = 30; l = 8
-Brute Force Median Search; Average Time Taken: 286414811 nanoseconds; Score: 32
-Branch and Bound Median Search; Average Time Taken: 57136825 nanoseconds; Score: 32
-Greedy Motif Search; Average Time Taken: 593129 nanoseconds; Score: 28
+Brute Force Median Search; Average Time Taken: 259982446 nanoseconds; Score: 30
+Branch and Bound Median Search; Average Time Taken: 67267709 nanoseconds; Score: 30
+Greedy Motif Search; Average Time Taken: 182173 nanoseconds; Score: 29
+Gibbs Motif Search; Average Time Taken: 12742 nanoseconds; Score: 22
 
 t = 5; n = 30; l = 9
-Brute Force Median Search; Average Time Taken: 1215048491 nanoseconds; Score: 33
-Branch and Bound Median Search; Average Time Taken: 197952697 nanoseconds; Score: 33
-Greedy Motif Search; Average Time Taken: 193271 nanoseconds; Score: 33
+Brute Force Median Search; Average Time Taken: 1115879736 nanoseconds; Score: 33
+Branch and Bound Median Search; Average Time Taken: 134076667 nanoseconds; Score: 33
+Greedy Motif Search; Average Time Taken: 187042 nanoseconds; Score: 31
+Gibbs Motif Search; Average Time Taken: 16257 nanoseconds; Score: 25
 
 t = 5; n = 30; l = 10
-Brute Force Median Search; Average Time Taken: 5136504556 nanoseconds; Score: 36
-Branch and Bound Median Search; Average Time Taken: 489618748 nanoseconds; Score: 36
-Greedy Motif Search; Average Time Taken: 189470 nanoseconds; Score: 33
+Brute Force Median Search; Average Time Taken: 4795645945 nanoseconds; Score: 35
+Branch and Bound Median Search; Average Time Taken: 550946168 nanoseconds; Score: 35
+Greedy Motif Search; Average Time Taken: 187874 nanoseconds; Score: 35
+Gibbs Motif Search; Average Time Taken: 21229 nanoseconds; Score: 28
+
